@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sound - Egypt's Leading Provider of Premium Sound Equipment Rentals</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #0A2463;
+            --secondary-color: #FFD700;
+            --accent-color: #C0C0C0;
+            --background-light: #FFFFFF;
+            --background-gray: #F5F5F5;
+            --text-color: #333333;
+        }
+        
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            height: 100px;
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .established {
+            font-size: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            background-image: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.8)), url('sound-equipment.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .cover h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .cover p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Services Section */
+        .service-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--background-light);
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .service-item h3 {
+            margin-top: 0;
+        }
+        
+        /* Equipment Brands */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .brand-item {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--background-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .brand-item img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        
+        /* Case Studies */
+        .case-study {
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: var(--background-gray);
+            border-radius: 5px;
+        }
+        
+        .case-study h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .case-study-meta {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .case-study-section {
+            margin-bottom: 20px;
+        }
+        
+        .case-study-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            position: relative;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: var(--background-gray);
+            border-radius: 5px;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 4rem;
+            color: var(--secondary-color);
+            opacity: 0.3;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        /* Why Choose Us */
+        .feature-item {
+            margin-bottom: 30px;
+        }
+        
+        .feature-item h3 {
+            color: var(--primary-color);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 15px;
+        }
+        
+        .contact-detail {
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-tagline {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background-color: var(--background-gray);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted var(--accent-color);
+        }
+        
+        .toc-item a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        
+        .toc-item .page {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Global Sound Logo" class="logo">
+        </div>
+        <h1>GLOBAL SOUND</h1>
+        <p>Egypt's Leading Provider of Premium Sound Equipment Rentals</p>
+        <div class="established">ESTABLISHED 2005</div>
+    </div>
+    
+    <!-- Table of Contents -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Table of Contents</h2>
+            </div>
+            <div class="toc">
+                <div class="toc-item">
+                    <a href="#about">About Global Sound</a>
+                    <span class="page">1</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#services">Our Services</a>
+                    <span class="page">4</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#equipment">Equipment Brands</a>
+                    <span class="page">8</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#projects">Featured Projects</a>
+                    <span class="page">12</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#testimonials">Client Testimonials</a>
+                    <span class="page">18</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#why-choose">Why Choose Us</a>
+                    <span class="page">20</span>
+                </div>
+                <div class="toc-item">
+                    <a href="#contact">Contact Information</a>
+                    <span class="page">22</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" style="background-color: var(--background-gray);">
+        <div class="container">
+            <div class="section-title">
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="Global Sound Logo" class="logo" style="height: 80px;">
+                </div>
+                <h2>About Global Sound</h2>
+            </div>
+            <div class="two-column">
+                <div class="column">
+                    <h3>Egypt's Premier Sound Equipment Rental Company</h3>
+                    <p>Since our founding in 2005, Global Sound has established itself as Egypt's leading provider of premium sound equipment rentals. For nearly two decades, we have been delivering exceptional audio solutions that transform ordinary events into extraordinary experiences.</p>
+                    
+                    <h3>Our Story</h3>
+                    <p>Global Sound was founded in 2005 by co-founders Michael Ezzat and Robert George, who shared a passion for perfect sound and a vision to elevate the audio experience at events across Egypt. What began as a small rental operation has grown into the country's most trusted name in professional sound equipment rentals.</p>
+                    <p>Both Michael Ezzat and Robert George are certified by L-Acoustics, one of the world's most prestigious sound system manufacturers. This certification demonstrates their exceptional technical expertise and commitment to the highest standards in audio engineering.</p>
+                    <p>Under the leadership of these L-Acoustics certified professionals, we have continuously expanded our inventory to include the most prestigious brands in the industry while maintaining our commitment to personalized service and technical excellence. Our journey has been defined by a relentless pursuit of audio perfection and an unwavering dedication to our clients' success.</p>
+                </div>
+                <div class="column">
+                    <h3>Our Mission</h3>
+                    <p>At Global Sound, our mission is simple yet profound: to provide world-class audio solutions that make every event unforgettable. We believe that exceptional sound quality is not just a technical achievement but an essential element that shapes how people experience and remember an event.</p>
+                    <p>We are committed to:</p>
+                    <ul>
+                        <li>Delivering premium sound equipment that meets the highest industry standards</li>
+                        <li>Providing customized audio solutions tailored to each client's unique needs</li>
+                        <li>Offering expert technical support to ensure flawless execution</li>
+                        <li>Continuously updating our inventory with the latest innovations in sound technology</li>
+                        <li>Building lasting relationships with our clients based on trust and reliability</li>
+                    </ul>
+                    
+                    <h3>Why We Stand Out</h3>
+                    <p>What sets Global Sound apart is our unique combination of world-class equipment, technical expertise, and dedicated service. As Egypt's leading sound equipment rental provider, we offer access to the industry's most prestigious brands, including L-Acoustics, Bose, JBL, Turbosound, Shure, Midas, and Yamaha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="Global Sound Logo" class="logo" style="height: 80px;">
+                </div>
+                <h2>Our Services</h2>
+            </div>
+            <div class="service-item">
+                <h3>Premium Sound Equipment Rentals</h3>
+                <p>At Global Sound, we provide access to the industry's most prestigious sound equipment, meticulously maintained and ready to elevate your event to exceptional standards. Our comprehensive rental service includes state-of-the-art audio systems, professional-grade components, flexible rental terms, and complete delivery and setup.</p>
+            </div>
+            <div class="service-item">
+                <h3>Custom Audio Solutions</h3>
+                <p>Every event space presents unique acoustic challenges, and every event has specific audio requirements. Our custom audio solutions address these individual needs through thorough venue assessment, tailored system design, specialized equipment selection, and detailed technical specifications.</p>
+            </div>
+            <div class="service-item">
+                <h3>Technical Support</h3>
+                <p>Our commitment to your event's success extends beyond providing premium equipment. We offer on-site audio engineers, troubleshooting expertise, pre-event consultation, and comprehensive equipment training for clients who prefer to operate their own systems.</p>
+            </div>
+            <div class="service-item">
+                <h3>Event Coverage</h3>
+                <p>Global Sound has extensive experience providing audio solutions for a diverse range of events including corporate events, concerts and music festivals, weddings and private celebrations, theatrical productions, and outdoor events. No matter the scale or nature of your event, we provide the equipment, expertise, and support to create an exceptional audio experience.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Equipment Brands Section -->
+    <section id="equipment" style="background-color: var(--background-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Equipment Brands</h2>
+            </div>
+            <p>At Global Sound, we partner with the world's leading sound system manufacturers to provide you with the highest quality audio equipment available. Our extensive inventory features premium products from these renowned brands:</p>
+            
+            <div class="brand-grid">
+                <div class="brand-item">
+                    <h3>L-Acoustics</h3>
+                    <p>Recognized globally as the gold standard in professional audio, L-Acoustics systems deliver unparalleled sound quality and coverage. Global Sound's co-founders Michael Ezzat and Robert George are certified by L-Acoustics, ensuring our team has the specialized training and expertise to design, configure, and operate these premium systems to their full potential.</p>
+                    <p><strong>Featured Systems:</strong> K Series Line Arrays, ARCS Series, X Series, SB Series Subwoofers</p>
+                </div>
+                <div class="brand-item">
+                    <h3>Bose Professional</h3>
+                    <p>Known for innovation and reliability, Bose Professional systems offer exceptional clarity and intelligibility.</p>
+                    <p><strong>Featured Systems:</strong> ShowMatch DeltaQ Arrays, RoomMatch Series, F1 Flexible Array Systems, S1 Pro Multi-Position PA System</p>
+                </div>
+                <div class="brand-item">
+                    <h3>JBL Professional</h3>
+                    <p>With a legacy spanning over 70 years, JBL Professional delivers robust, reliable sound reinforcement solutions.</p>
+                    <p><strong>Featured Systems:</strong> VTX Series Line Arrays, VRX Series, EON Series, SRX Series</p>
+                </div>
+                <div class="brand-item">
+                    <h3>Turbosound</h3>
+                    <p>Turbosound systems are known for their distinctive character and exceptional performance in live music applications.</p>
+                    <p><strong>Featured Systems:</strong> Flashline Series, Flex Array Series, iQ Series, Milan Series</p>
+                </div>
+                <div class="brand-item">
+                    <h3>Shure</h3>
+                    <p>The industry standard for professional microphones and wireless systems, Shure products are synonymous with reliability and quality.</p>
+                    <p><strong>Featured Products:</strong> SM Series Microphones, Beta Series Microphones, ULX-D Digital Wireless Systems, PSM In-Ear Monitoring Systems</p>
+                </div>
+                <div class="brand-item">
+                    <h3>Midas</h3>
+                    <p>Renowned for their legendary sound quality, Midas mixing consoles represent the pinnacle of live sound mixing technology.</p>
+                    <p><strong>Featured Consoles:</strong> Heritage Series, PRO Series, M Series, Venice Series</p>
+                </div>
+                <div class="brand-item">
+                    <h3>Yamaha</h3>
+                    <p>A trusted name in professional audio for decades, Yamaha offers comprehensive solutions for sound reinforcement.</p>
+                    <p><strong>Featured Products:</strong> CL/QL Series Digital Consoles, RIVAGE PM Series, DZR Series Powered Speakers, TF Series Digital Mixers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="Global Sound Logo" class="logo" style="height: 80px;">
+                </div>
+                <h2>Featured Projects</h2>
+            </div>
+            <p>At Global Sound, we've had the privilege of providing premium audio solutions for a diverse range of events across Egypt. The following case studies highlight our expertise, versatility, and commitment to excellence in sound reinforcement.</p>
+            
+            <div class="case-study">
+                <h3>International Business Conference in Cairo</h3>
+                <div class="case-study-meta">Client: Cairo International Convention Center</div>
+                
+                <div class="case-study-section">
+                    <h4>Event Details</h4>
+                    <p>A three-day international business conference hosting 1,500 delegates from 40 countries, featuring keynote presentations, panel discussions, and breakout sessions across multiple halls.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Challenge</h4>
+                    <p>The client required crystal-clear speech intelligibility in the main hall for keynote presentations while simultaneously providing independent sound systems for eight breakout rooms. The main hall's challenging acoustics and the need for multilingual translation systems added complexity to the project.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Solution</h4>
+                    <p>For the main hall, we deployed an L-Acoustics KARA line array system with careful optimization to minimize reflections and maximize intelligibility. Each breakout room received a customized Bose RoomMatch system configured specifically for the dimensions and acoustic properties of the space.</p>
+                    <p>We integrated Shure ULX-D digital wireless systems with DIS discussion units for panel sessions, and implemented a comprehensive monitoring system for the translation booths using Yamaha equipment.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Result</h4>
+                    <p>The conference organizers reported exceptional sound quality throughout the venue, with many international delegates commenting that it was the best sound they had experienced at a conference in Egypt. The client has since contracted Global Sound for all their major events.</p>
+                </div>
+            </div>
+            
+            <div class="case-study">
+                <h3>Summer Beats Festival</h3>
+                <div class="case-study-meta">Client: Egyptian Entertainment Productions</div>
+                
+                <div class="case-study-section">
+                    <h4>Event Details</h4>
+                    <p>A two-day outdoor music festival featuring 15 acts across two stages, with attendance of approximately 8,000 people per day.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Challenge</h4>
+                    <p>The festival required two complete stage systems capable of handling diverse musical styles from electronic dance music to acoustic performances. The main stage needed to accommodate international touring acts with specific technical requirements, while the secondary stage needed quick changeovers between performances.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Solution</h4>
+                    <p>For the main stage, we provided a full L-Acoustics K2 line array system with KS28 subwoofers in a cardioid configuration to minimize backstage noise. Front-of-house mixing was handled with a Midas PRO X console, while monitor mixing utilized a Yamaha CL5.</p>
+                    <p>The secondary stage featured a JBL VTX system with Crown amplification and a Midas M32 console for both front-of-house and monitor mixing, allowing for rapid changeovers between acts.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Result</h4>
+                    <p>All performances were delivered with exceptional sound quality, receiving praise from both artists and attendees. The international headliners' production managers specifically commended the quality of our equipment and the professionalism of our technical team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="background-color: var(--background-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+            </div>
+            <p>At Global Sound, our clients' satisfaction is our greatest measure of success. Here's what some of our valued clients have to say about their experience working with us:</p>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    Global Sound has been our exclusive audio provider for the Cairo International Film Festival for the past five years. Their technical expertise and premium equipment have consistently delivered flawless sound for our screenings, press conferences, and gala events. Their team's professionalism and attention to detail are unmatched in Egypt.
+                </div>
+                <div class="testimonial-author">— Ahmed Mahmoud, Technical Director, Cairo International Film Festival</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    When we organized our company's 25th anniversary celebration, we needed a sound provider who could handle both the formal presentations and the evening entertainment. Global Sound exceeded our expectations on every level. From the initial consultation to the final note of music, their service was impeccable.
+                </div>
+                <div class="testimonial-author">— Laila Ibrahim, Events Manager, Egyptian Commercial Bank</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    As a wedding planner catering to high-end clients, I need vendors I can trust implicitly. Global Sound has never disappointed. Their discreet setup, crystal-clear sound, and ability to adapt to last-minute changes have made them an essential partner for our most prestigious events.
+                </div>
+                <div class="testimonial-author">— Nour El-Din, Founder, Elegant Occasions Wedding Planning</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section id="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Global Sound</h2>
+            </div>
+            <div class="two-column">
+                <div class="column">
+                    <div class="feature-item">
+                        <h3>Nearly Two Decades of Excellence</h3>
+                        <p>Since 2005, Global Sound has built a reputation for exceptional service and technical expertise. Our longevity in the industry reflects our consistent delivery of quality and reliability across thousands of events throughout Egypt.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Premium Equipment Inventory</h3>
+                        <p>We invest continuously in the world's finest audio equipment. Our inventory features only the most respected brands in the industry—L-Acoustics, Bose, JBL, Turbosound, Shure, Midas, and Yamaha.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Technical Mastery</h3>
+                        <p>Our team consists of experienced audio professionals with deep technical knowledge and practical expertise. From acoustic analysis to system configuration and operation, our specialists ensure optimal sound quality regardless of venue challenges or event requirements.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Comprehensive Solutions</h3>
+                        <p>Global Sound offers end-to-end audio services, from initial consultation and system design to delivery, setup, operation, and removal. This full-service approach means you have a single, reliable partner for all your sound requirements.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="feature-item">
+                        <h3>Versatility Across Event Types</h3>
+                        <p>Whether you're organizing a corporate conference, music festival, wedding celebration, theatrical production, or any other event type, we have the specialized equipment and expertise to deliver exceptional sound.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Customized Approach</h3>
+                        <p>We recognize that every event is unique. Rather than offering one-size-fits-all solutions, we take the time to understand your specific needs and design a customized audio setup that perfectly addresses your requirements.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Unwavering Reliability</h3>
+                        <p>In live event production, reliability is paramount. Our rigorous equipment maintenance protocols, redundant systems approach, and meticulous attention to detail ensure flawless performance when it matters most.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Client-Centered Service</h3>
+                        <p>We measure our success by your satisfaction. From your first inquiry to the final note of your event, we prioritize clear communication, responsive service, and a collaborative approach that makes your vision our mission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--background-gray);">
+        <div class="container">
+            <div class="section-title">
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="Global Sound Logo" class="logo" style="height: 80px;">
+                </div>
+                <h2>Contact Global Sound</h2>
+            </div>
+            <div class="two-column">
+                <div class="column">
+                    <div class="contact-info">
+                        <h3>Office Address</h3>
+                        <div class="contact-detail">Global Sound Headquarters</div>
+                        <div class="contact-detail">2 Abd El Aziz El Hawary</div>
+                        <div class="contact-detail">Heliopolis, Cairo</div>
+                        <div class="contact-detail">Egypt</div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-detail"><strong>Office Tel:</strong> +20222032204</div>
+                        <div class="contact-detail"><strong>Michael Ezzat:</strong> 01222265573</div>
+                        <div class="contact-detail"><strong>Robert George:</strong> 01281333369</div>
+                        <div class="contact-detail"><strong>Email:</strong> info@globalsound-egypt.com</div>
+                        <div class="contact-detail"><strong>Website:</strong> www.globalsound.com.eg</div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Business Hours</h3>
+                        <div class="contact-detail">Monday - Thursday: 9:00 AM - 6:00 PM</div>
+                        <div class="contact-detail">Friday: 9:00 AM - 1:00 PM</div>
+                        <div class="contact-detail">Saturday: 10:00 AM - 4:00 PM</div>
+                        <div class="contact-detail">Sunday: Closed</div>
+                        <div class="contact-detail"><em>24/7 support available for ongoing events</em></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="contact-info">
+                        <h3>Request a Quote</h3>
+                        <p>For detailed quotations, please provide the following information when contacting us:</p>
+                        <ul>
+                            <li>Event date and duration</li>
+                            <li>Event type and expected attendance</li>
+                            <li>Venue details and location</li>
+                            <li>Specific equipment requirements (if known)</li>
+                            <li>Additional services needed (technical support, operation, etc.)</li>
+                        </ul>
+                        <p>Our team will respond within 24 hours with a comprehensive proposal tailored to your needs.</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Equipment Demonstrations</h3>
+                        <p>We welcome clients to schedule equipment demonstrations at our showroom. Experience the quality of our premium sound systems firsthand and consult with our technical experts about your specific requirements.</p>
+                        <p><em>Demonstrations available by appointment only</em></p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Social Media</h3>
+                        <div class="contact-detail"><strong>Facebook:</strong> @GlobalSoundEgypt</div>
+                        <div class="contact-detail"><strong>Instagram:</strong> @GlobalSound_Egypt</div>
+                        <div class="contact-detail"><strong>LinkedIn:</strong> Global Sound Egypt</div>
+                        <div class="contact-detail"><strong>YouTube:</strong> Global Sound Egypt Channel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">GLOBAL SOUND</div>
+            <div class="footer-tagline">Egypt's Leading Provider of Premium Sound Equipment Rentals</div>
+            <div class="footer-contact">
+                <div>123 Nile Business Center, Maadi, Cairo, Egypt</div>
+                <div>+20 2 2516 XXXX | info@globalsound-egypt.com</div>
+            </div>
+            <div class="established">ESTABLISHED 2005</div>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
